@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formularios</title>
+  </head>
+  <body>
+    <form action="results.html" method="GET">  <!--el atrib action hace referencia a la url o archivo al que se desea enviar el formulario . La ruta del archivo es relativa -->
+      <div>
+        <label for="nombreUsuario">Nombre de Usuario</label>
+        <!--label permite asociar al input de id "nombreUsuario" con el texto Nombre de Usuario. Al hacer click en el texto, se "-->
+        <!--pone para escribir en su input correspondiente-->
+        <input id="nombreUsuario" name="nombreUsuario" required/> 
+      </div>
+      <br>
+      <div>
+        <label for="password">Contraseña</label>  
+        <input id="password" name="password" type="password" required/> 
+      </div>
+      <br>
+      <div>
+        <label for="edad">Edad</label>
+        <input type="number" id="edad">
+      </div>
+      <br>
+      <div>
+        <label for="fechaDeNacimiento">Fecha de Nacimiento</label>
+        <input type="date" name="fechaDeNacimiento" id="fechaDeNacimiento">
+      </div>
+      <br>
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" id="email">
+      </div>
+      <br>
+      <div>
+        <label for="comentarios">Comentarios</label>
+        <textarea name="comentarios" id="comentarios" ></textarea>  <!--Sirve para crear un campo de tamaño variable-->
+      </div>
+      <button type="submit">Enviar</button>
+      <button type="reset">Resetear</button>
+    </form>
+  </body>
+</html>
+
+
+<!--Atributos para input-->
+<!--
+  Types:
+
+  password: el valor se muestra en puntitos
+  number: solo valores numericos
+  email: valores de tipo mail (requiere que tenga un @)
+  min/max: minimo y maximo valor (tipo numerico)
+  step: para que los valores numericos vayan de n en n
+  date: de tipo fecha
+  required: indica que el campo debe ser llenado si o si
+  name: indicara el nombre representativo con el que se enviara el input como query params en la url de "action"
+
+-->
+<!-- Atributos para button
+  Types:
+    submit: submit es aquel que presionando enter va a cargar el formulario al form-handler. el form-handler esta definido en el atrib action de form
+    reset: reset es aquel que al presionarlo resetea los valores de los campos. Si tenian valores predeterminados pone esos. Si no, los deja vacios
+
+
+
+
+-->
