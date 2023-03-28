@@ -29,6 +29,32 @@ p {
     text-decoration: underline;
     font-style: italic;
 }
+
+
 /* tambien se pueden combinar: p#primera-noticia  :todos los que sean parrafos y tengan el id "primera-noticia" 
 
 */
+
+/*FORMAS DE DEFINIR UN COLOR*/
+
+.color-hexadecimal {        /*Hexadecimal*/
+    color: #BCE784;
+}
+
+.color-rgb {
+    color: rgb(100, 0, 150);  /**RGB (red,green, blue)*/
+}
+
+.color-rgba {
+    color: rgba(100, 0, 150, 0.5);  /* RGBA: el ultimo parametro define la transparencia u opacidad del color. Se introduce un valor del 0 al 1. Si es 1 es un RGB normal*/
+}
+
+
+/*FONDOS*/
+.fondo{
+    /*background-color: #BCE784;*/
+    background-image: url(../multimedia/imagenes/png-clipart-web-development-logo-computer-programming-design-trademark-logo.png);  /*La url puede ser externa o un path de una img local*/
+    background-position: top,center; /*Tambien puedo elegir como centrar un fondo*/
+}
+
+

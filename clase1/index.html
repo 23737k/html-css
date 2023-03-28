@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Pagina de enseñanza HTML" />
+    <meta name="keywords" content="html5, css3, Javascript" />       <!--palabras clave que usan los browsers para categorizar las paginas web-->
+   
+    <title>Pagina de Programacion en HTML</title>
+    <link rel="stylesheet" href="style.css" />       <!--aqui se incluye la hoja de estilos-->
+   
+    <!--con la etiqueta <style> puedo agregar codigo CSS-->
+    <style>
+        table,th,tr,td {
+            border: 1px solid black;  /*Le digo que el borde sea de 1px solido y negro para todas las tablas columnas y filas*/
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mi página web</h1>
+    </header>
+    <nav>
+      <ul>
+        <!--Barra de Navegacion Horizontal-->
+        <li>Quienes somos</li>
+        <li>Nuestros Productos</li>
+        <li>Precios</li>
+        <li>Contáctanos</li>
+      </ul>
+    </nav>
+    Pagina web
+
+    <aside>
+      <!--Barra lateral-->
+      <blockquote>Primer elemento</blockquote>
+      <blockquote>Segundo elemento</blockquote>
+      <blockquote>Tercer elemento</blockquote>
+    </aside>        
+    <section>
+        <!--Contenido Principal del HTML-->
+        
+        <!--Con href puedo con # poner links para moverme hacia diferentes secciones de mi html. Tengo que indicar el id de dicha seccion-->
+        <article>
+            <h3>Indice</h3>
+            <ul>
+                <li><a href="#noticia1">Noticia 1</a></li>
+                <li><a href="#noticia2">Noticia 2</a></li>
+                <li><a href="#formulario">Formulario</a></li>
+            </ul>
+        </article>
+
+
+        <br>
+        <hr>
+        <article id="noticia1">
+            <!--Se utiliza article para agrupar contenido que tienen que ver con lo mismo-->
+            <header>
+                <!--Tambien dentro de un article se pude definir el header para dicho contenido-->
+                <h2>Titulo de la noticia 1</h2>
+            </header>
+
+            <p>Noticia 1</p>
+            <p>Seguimos hablando de la noticia 1</p>
+            <p>Terminamos de hablar de la noticia 1</p>
+        
+            <footer>
+                <!--tambien se puede definir un footer-->
+                <p>Comentarios de usuarios</p>
+            </footer>
+
+        </article>
+        <hr>
+        <!--Linea horizontal-->
+        <article id="noticia2">
+            <header>
+                <h2>Titulo de la noticia 2</h2>
+            </header>
+            
+            <p>Noticia 2</p>
+            <p>Seguimos hablando de la noticia 2
+                y <span style="background-color: yellow ;">seguimos y seguimos</span> <!-- <span> referencia una parte de un texto o una etiqueta de que se encuentra dentro de otras etiquetas-->
+                , hasta lograr un parrafo muy                                              <!--Esto es muy util cuando quiero darle un estilo unicamente a esa parte con CSS-->
+                grande.                                             
+            </p>
+            <p>Terminamos de hablar de la noticia 2</p>
+        
+            <footer>
+                <p>Comentarios de usuarios</p>
+            </footer>
+        </article>
+        <br>
+    <!--LINKS-->
+
+        <a target="_blank" href="https://www.google.com">Link a Google</a>  <!--Con el atributo target="_blank" al abrir un link se abrira en otra pestaña-->
+        <br><br>
+        <img src="Organizacion de una pagina web en html.png" alt="imagen" width="400">
+    </section>
+
+    <!--LISTAS-->
+    <ol>
+        <li value="50">Pedro</li> <!--Con esto va a empezar a enumerarlos a partir de cierto valor-->
+        <li>Rodrigo</li>
+        <li>Sebastian</li>
+    </ol>
+    <br>
+    <ol>
+        <span style="list-style-type: lower-roman;">   <!--Tambien podemos con el atributo list-style-type  cambiar el tipo de numeracion en una lista ordenada-->
+            <li>Argentina</li>
+            <li>Chile</li>
+            <li>Bolivia</li>
+        </span>
+    </ol>
+
+    <!--TABLAS-->
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Medallas Ganadas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Joaquin</td>
+                <td>25</td>
+                <td>7</td>
+            </tr>
+    
+            <tr>
+                <td>Carlos</td>
+                <td>23</td>
+                <td>5</td>
+            </tr>
+        </tbody>        
+    </table> 
+
+    <!--para agregarle bordes u otros estilos a la tabla, lo tengo que hacer con CSS. Ver <head> -->
+
+
+    <!--FORMULARIOS-->
+    <br>
+    <br>
+    <form id="formulario">
+        <label for="nombre-de-usuario"> Nombre de Usuario </label>
+            <input type="text" name="nombre-de-usuario" id="nombre-de-usuario" placeholder="Ingrese un nombre de usuario"> <!--Placeholder es para agregar un comentario en el input-->
+        <br>                    <!--Con el atrib value se puede poder un valor por defecto dentro del input-->
+        <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="contraseña" placeholder="Ingrese una contraseña">
+        <br>
+        <label for="sexo">Sexo</label>
+            Hombre<input type="radio" name="sexo" id="hombre">
+            Mujer<input type="radio" name="sexo" id="mujer">
+        <br>
+        <label for="foto">Subir foto de Perfil</label>
+            <br>
+            <input type="file" name="foto" id="foto">
+            <br>
+        <label for="comentarios">Ingrese un comentario</label>
+        <br>
+        <textarea name="comentario" id="comentario" cols="50" rows="10" placeholder="Ingrese un comentario de 500 caracteres max. "></textarea>
+       <br>
+        <input type="submit"> <!--Tambien se puede hacer con button, solo hay que especificar el type="submit"-->
+        <input type="reset">
+        <br>
+        <button type="button"><img src="boton.png" alt="boton personalizado" width="150"></button> <!--con button puedo personalizarlo mas-->
+    </form>
+
+    <br>
+    <hr>
+    <footer>Copyright 2023</footer>
+  </body>
+</html>
+
+
+
+
+<!--
+    OTRAS ETIQUETAS DE ORGANIZACION MAS:
+<main></main>: utilizada para indicar el contenido principal
+<figure></figure>: utilizada para imagenes. Dentro de esta se puede agregar la img y una leyenda  con la etiqueta <figcaption></figcaption>
+
+
+-->>
